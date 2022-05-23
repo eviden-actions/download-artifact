@@ -20,6 +20,14 @@ runs:
         name: ${{ inputs.name }}
         path: ${{ inputs.name }}.tar
 
+    - id: path
+      name: '📁 Create destination path'
+      shell: bash
+      run: |
+        if [[ "${{inputs.path}}" != "." ]]; then
+          mkdir -p "${{inputs.path}}"
+        fi
+
     - name: '📦 tar inputs'
       shell: 'bash'
       working-directory: ${{ inputs.path }}
@@ -29,4 +37,4 @@ runs:
 
     - name: '🧹 cleanup'
       shell: 'bash'
-      run: rm -f ${{ inputs.name }}.tar
+      run: rm -rf ${{ inputs.name }}.tar
