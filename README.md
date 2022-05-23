@@ -14,39 +14,42 @@ See [action.yml](action.yml)
 ### Download a Single Artifact
 
 Basic (download to the current working directory):
+
 ```yaml
 steps:
-- uses: actions/checkout@v3
+  - uses: actions/checkout@v3
 
-- uses: atos-actions/download-artifact@v1
-  with:
-    name: my-artifact
-    
-- name: Display structure of downloaded files
-  run: ls -R
-```
-
-Download to a specific directory:
-```yaml
-steps:
-- uses: actions/checkout@v3
-
-- uses: atos-actions/download-artifact@v1
-  with:
-    name: my-artifact
-    path: path/to/artifact
-    
-- name: Display structure of downloaded files
-  run: ls -R
-  working-directory: path/to/artifact
-```
-
-Basic tilde expansion is supported for the `path` input:
-```yaml
   - uses: atos-actions/download-artifact@v1
     with:
       name: my-artifact
-      path: ~/download/path
+
+  - name: Display structure of downloaded files
+    run: ls -R
+```
+
+Download to a specific directory:
+
+```yaml
+steps:
+  - uses: actions/checkout@v3
+
+  - uses: atos-actions/download-artifact@v1
+    with:
+      name: my-artifact
+      path: path/to/artifact
+
+  - name: Display structure of downloaded files
+    run: ls -R
+    working-directory: path/to/artifact
+```
+
+Basic tilde expansion is supported for the `path` input:
+
+```yaml
+- uses: atos-actions/download-artifact@v1
+  with:
+    name: my-artifact
+    path: ~/download/path
 ```
 
 # Download path output
@@ -55,16 +58,16 @@ The `download-path` step output contains information regarding where the artifac
 
 ```yaml
 steps:
-- uses: actions/checkout@v3
+  - uses: actions/checkout@v3
 
-- uses: atos-actions/download-artifact@v1
-  id: download
-  with:
-    name: 'my-artifact'
-    path: path/to/artifacts
+  - uses: atos-actions/download-artifact@v1
+    id: download
+    with:
+      name: 'my-artifact'
+      path: path/to/artifacts
 
-- name: 'Echo download path'
-  run: echo ${{steps.download.outputs.download-path}}
+  - name: 'Echo download path'
+    run: echo ${{steps.download.outputs.download-path}}
 ```
 
 > Note: The `id` defined in the `download/artifact` step must match the `id` defined in the `echo` step (i.e `steps.[ID].outputs.download-path`)
