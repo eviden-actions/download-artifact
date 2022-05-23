@@ -31,7 +31,7 @@ runs:
     - name: '📦 tar inputs'
       shell: 'bash'
       run: |
-        tar -xvf ${{ inputs.name }.tar -C ${{ inputs.path }};
+        tar -xvf ${{ inputs.name }}.tar -C ${{ inputs.path }};
       continue-on-error: true
 
     - name: '🧹 cleanup'
