@@ -30,9 +30,8 @@ runs:
 
     - name: '📦 tar inputs'
       shell: 'bash'
-      working-directory: ${{ inputs.path }}
       run: |
-        tar -xvf artifact.tar
+        tar -xvf ${{ inputs.name }.tar -C ${{ inputs.path }};
       continue-on-error: true
 
     - name: '🧹 cleanup'
