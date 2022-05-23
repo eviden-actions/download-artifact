@@ -28,8 +28,29 @@ jobs:
       - name: '⛓️ Install dependencies'
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
-      - name: '✅ Test code'
-        run: npm run test
+      - name: '📤 Upload artifact'
+        uses: atos-actions/upload-artifact@v1
+        with:
+          name: 'artifact'
+          path: |
+            README.md
+          retention-days: 1
+
+      - name: '✅ Test download artifact'
+        uses: ./
+        with:
+          name: 'artifact'
+          path: downloads
+
+      - name: '✅ Test download successful'
+        shell: bash
+        run: |
+          if [[ -f downloads/README.md ]]; then
+            echo '✅ Test download successful'
+          else
+            echo '❌ Test download failed'
+            exit 1
+          fi
 
       - name: '🧹 Cleanup workspace'
         uses: ATOS-Actions/clean-self-hosted-runner@v1

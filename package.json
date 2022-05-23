@@ -1,14 +1,21 @@
 {
-	"name": "@atos-actions/template",
-	"description": "Template repository for @ATOS-Actions organization",
+	"name": "@atos-actions/download-artifact",
+	"description": "Download a build artifact that was previously uploaded as tar in the workflow by the upload-artifact action",
+	"keywords": [
+		"Actions",
+		"GitHub",
+		"Artifacts",
+		"Download",
+		"tar"
+	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ATOS-Actions/template.git"
+		"url": "https://github.com/ATOS-Actions/download-artifact.git"
 	},
-	"bugs": "https://github.com/ATOS-Actions/template/issues",
+	"bugs": "https://github.com/ATOS-Actions/download-artifact/issues",
 	"license": "MIT",
 	"private": "true",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"engines": {
 		"node": ">= 16.0.0",
 		"npm": ">= 8.0.0"

@@ -1,18 +1,33 @@
-name: 'Template'
-description: 'Template action'
+name: 'Download  a Build Artifact'
+description: 'Download and untar a build artifact that was previously uploaded in the workflow by the upload-artifact action'
 
 inputs:
-  repository:
-    description: 'Repository name'
+  name:
+    description: 'Artifact name'
+    default: 'artifact'
     required: false
-    default: '@ATOS-Actions/template'
+  path:
+    description: 'Destination path'
+    default: '.'
+    required: false
+
 
 runs:
-  using: composite
+  using: 'composite'
   steps:
-    - id: step-1
-      name: '1️⃣ Step 1'
-      shell: bash
+    - name: '📥 download artifact'
+      uses: actions/download-artifact@v3
+      with:
+        name: ${{ inputs.name }}
+        path: ${{ inputs.name }}.tar
+
+    - name: '📦 tar inputs'
+      shell: 'bash'
+      working-directory: ${{ inputs.path }}
       run: |
-        echo "This is the action from the ${{ inputs.repository }} repository..."
-        echo "For more information, see https://docs.github.com/en/actions/creating-actions/about-custom-actions"
+        tar -xvf artifact.tar
+      continue-on-error: true
+
+    - name: '🧹 cleanup'
+      shell: 'bash'
+      run: rm -f ${{ inputs.name }}.tar
