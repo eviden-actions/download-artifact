@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/ATOS-Actions/download-artifact/compare/v1.0.1...v1.0.2) (2022-06-07)
+
+
+### Bug Fixes
+
+* use PT to update protected tags ([d663f0d](https://github.com/ATOS-Actions/download-artifact/commit/d663f0d9911b57a8bea100736196b547c6a63e96))
+
 ## [1.0.1](https://github.com/ATOS-Actions/download-artifact/compare/v1.0.0...v1.0.1) (2022-06-07)
 
 
