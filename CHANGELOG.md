@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ATOS-Actions/download-artifact/compare/v1.0.0...v1.0.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* hardcoded archive name ([#7](https://github.com/ATOS-Actions/download-artifact/issues/7)) ([1439d0a](https://github.com/ATOS-Actions/download-artifact/commit/1439d0ab6b3c73fe95fd9b9642304fce11184bd6))
+
 # 1.0.0 (2022-05-23)
 
 
