@@ -31,7 +31,7 @@ jobs:
       - name: '📤 Upload artifact'
         uses: atos-actions/upload-artifact@v1
         with:
-          name: 'artifact'
+          name: 'test-artifact'
           path: |
             README.md
           retention-days: 1
@@ -39,7 +39,7 @@ jobs:
       - name: '✅ Test download artifact'
         uses: ./
         with:
-          name: 'artifact'
+          name: 'test-artifact'
           path: downloads
 
       - name: '✅ Test download successful'
