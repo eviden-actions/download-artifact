@@ -3,9 +3,9 @@
 This downloads artifacts from your build
 This action is an extension of Github's [download-artifact](https://github.com/actions/download-artifact) action that `untar` the files after downloading.
 
-See also [upload-artifact](https://github.com/ATOS-Actions/upload-artifact).
+See also [upload-artifact](https://github.com/eviden-actions/upload-artifact).
 
-[![Release](https://github.com/ATOS-Actions/download-artifact/actions/workflows/on_push.yml/badge.svg#main)](https://github.com/ATOS-Actions/download-artifact/actions/workflows/on_push.yml)
+[![Release](https://github.com/eviden-actions/download-artifact/actions/workflows/on_push.yml/badge.svg#main)](https://github.com/eviden-actions/download-artifact/actions/workflows/on_push.yml)
 
 ## Usage
 
@@ -19,7 +19,7 @@ Basic (download to the current working directory):
 steps:
   - uses: actions/checkout@v3
 
-  - uses: atos-actions/download-artifact@v1
+  - uses: eviden-actions/download-artifact@v1
     with:
       name: my-artifact
 
@@ -33,7 +33,7 @@ Download to a specific directory:
 steps:
   - uses: actions/checkout@v3
 
-  - uses: atos-actions/download-artifact@v1
+  - uses: eviden-actions/download-artifact@v1
     with:
       name: my-artifact
       path: path/to/artifact
@@ -46,7 +46,7 @@ steps:
 Basic tilde expansion is supported for the `path` input:
 
 ```yaml
-- uses: atos-actions/download-artifact@v1
+- uses: eviden-actions/download-artifact@v1
   with:
     name: my-artifact
     path: ~/download/path
@@ -60,7 +60,7 @@ The `download-path` step output contains information regarding where the artifac
 steps:
   - uses: actions/checkout@v3
 
-  - uses: atos-actions/download-artifact@v1
+  - uses: eviden-actions/download-artifact@v1
     id: download
     with:
       name: 'my-artifact'

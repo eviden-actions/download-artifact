@@ -31,7 +31,7 @@ jobs:
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
       - name: '📤 Upload artifact'
-        uses: atos-actions/upload-artifact@v1
+        uses: eviden-actions/upload-artifact@v1
         with:
           name: 'test-artifact'
           path: |
@@ -55,4 +55,4 @@ jobs:
           fi
 
       - name: '🧹 Cleanup workspace'
-        uses: ATOS-Actions/clean-self-hosted-runner@v1
+        uses: eviden-actions/clean-self-hosted-runner@v1
