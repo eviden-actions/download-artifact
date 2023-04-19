@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/eviden-actions/download-artifact/compare/v1.0.2...v1.1.0) (2023-04-19)
+
+
+### Features
+
+* rebrand to eviden-actions ([fd1ce83](https://github.com/eviden-actions/download-artifact/commit/fd1ce83768690d23cbe4e64f34ab0a8effb175fc))
+
+
+### Dependencies and Other Build Updates
+
+* auto release dependencies updates ([#16](https://github.com/eviden-actions/download-artifact/issues/16)) ([e515987](https://github.com/eviden-actions/download-artifact/commit/e51598700699e1922618b333a6d1f2ac25517889))
+
 ## [1.0.2](https://github.com/eviden-actions/download-artifact/compare/v1.0.1...v1.0.2) (2022-06-07)
 
 
