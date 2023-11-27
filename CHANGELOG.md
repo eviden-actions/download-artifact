@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/eviden-actions/download-artifact/compare/v1.1.0...v1.1.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* update action name and brand info ([34039c5](https://github.com/eviden-actions/download-artifact/commit/34039c567dce77f703c9844f24679293792ccc1a))
+
 ## [1.1.0](https://github.com/eviden-actions/download-artifact/compare/v1.0.2...v1.1.0) (2023-04-19)
 
 
