@@ -1,5 +1,5 @@
 name: 'Download and Untar a Build Artifact'
-description: 'Download and unpack a build artifact that was previously uploaded as tar archive in the workflow by the @eviden-actions/upload-artifact action'
+description: 'Download and unpack a build artifact that was previously uploaded in the workflow by the upload-artifact action'
 
 branding:
   icon: 'arrow-down-circle'
