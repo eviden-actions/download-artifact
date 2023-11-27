@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/eviden-actions/download-artifact/compare/v1.1.1...v1.1.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* shorten description ([b67bdce](https://github.com/eviden-actions/download-artifact/commit/b67bdce17e0b86245109aa9a58e857e8dd4921e9))
+
 ## [1.1.1](https://github.com/eviden-actions/download-artifact/compare/v1.1.0...v1.1.1) (2023-11-27)
 
 
