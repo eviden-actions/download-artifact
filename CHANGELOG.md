@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/eviden-actions/download-artifact/compare/v1.1.2...v2.0.0) (2024-02-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** https://github.com/actions/download-artifact?tab=readme-ov-file#breaking-changes
+
+### Features
+
+* **deps:** bump actions/download-artifact from v3 to v4  ([#138](https://github.com/eviden-actions/download-artifact/issues/138)) ([4f1bec2](https://github.com/eviden-actions/download-artifact/commit/4f1bec213d6c4f3f88c9428378969cba8e84bc0b))
+
 ## [1.1.2](https://github.com/eviden-actions/download-artifact/compare/v1.1.1...v1.1.2) (2023-11-27)
 
 
