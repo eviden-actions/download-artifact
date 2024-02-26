@@ -15,13 +15,13 @@ jobs:
 
     steps:
       - name: '☁️ Checkout repository'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
 
       - name: '⚙️ Use Node.js'
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           check-latest: true
@@ -31,7 +31,7 @@ jobs:
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
       - name: '📤 Upload artifact'
-        uses: eviden-actions/upload-artifact@v1
+        uses: eviden-actions/upload-artifact@v2
         with:
           name: 'test-artifact'
           path: |
