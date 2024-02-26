@@ -73,8 +73,8 @@ For assistance with breaking changes, see [MIGRATION.md](docs/MIGRATION.md).
 
 ### Outputs
 
-| Name | Description | Example |
-| - | - | - |
+| Name            | Description                                         | Example                 |
+| --------------- | --------------------------------------------------- | ----------------------- |
 | `download-path` | Absolute path where the artifact(s) were downloaded | `/tmp/my/download/path` |
 
 ## Examples
@@ -85,25 +85,24 @@ Download to current working directory (`$GITHUB_WORKSPACE`):
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-  with:
-    name: my-artifact
-- name: Display structure of downloaded files
-  run: ls -R
+  - uses: actions/download-artifact@v4
+    with:
+      name: my-artifact
+  - name: Display structure of downloaded files
+    run: ls -R
 ```
 
 Download to a specific directory (also supports `~` expansion):
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-  with:
-    name: my-artifact
-    path: your/destination/dir
-- name: Display structure of downloaded files
-  run: ls -R your/destination/dir
+  - uses: actions/download-artifact@v4
+    with:
+      name: my-artifact
+      path: your/destination/dir
+  - name: Display structure of downloaded files
+    run: ls -R your/destination/dir
 ```
-
 
 ### Download All Artifacts
 
@@ -123,32 +122,32 @@ Download all artifacts to the current working directory:
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-- name: Display structure of downloaded files
-  run: ls -R
+  - uses: actions/download-artifact@v4
+  - name: Display structure of downloaded files
+    run: ls -R
 ```
 
 Download all artifacts to a specific directory:
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-  with:
-    path: path/to/artifacts
-- name: Display structure of downloaded files
-  run: ls -R path/to/artifacts
+  - uses: actions/download-artifact@v4
+    with:
+      path: path/to/artifacts
+  - name: Display structure of downloaded files
+    run: ls -R path/to/artifacts
 ```
 
 To download them to the _same_ directory:
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-  with:
-    path: path/to/artifacts
-    merge-multiple: true
-- name: Display structure of downloaded files
-  run: ls -R path/to/artifacts
+  - uses: actions/download-artifact@v4
+    with:
+      path: path/to/artifacts
+      merge-multiple: true
+  - name: Display structure of downloaded files
+    run: ls -R path/to/artifacts
 ```
 
 Which will result in:
@@ -171,24 +170,24 @@ jobs:
         runs-on: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.runs-on }}
     steps:
-    - name: Create a File
-      run: echo "hello from ${{ matrix.runs-on }}" > file-${{ matrix.runs-on }}.txt
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact-${{ matrix.runs-on }}
-        path: file-${{ matrix.runs-on }}.txt
+      - name: Create a File
+        run: echo "hello from ${{ matrix.runs-on }}" > file-${{ matrix.runs-on }}.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact-${{ matrix.runs-on }}
+          path: file-${{ matrix.runs-on }}.txt
   download:
     needs: upload
     runs-on: ubuntu-latest
     steps:
-    - name: Download All Artifacts
-      uses: actions/download-artifact@v4
-      with:
-        path: my-artifact
-        pattern: my-artifact-*
-        merge-multiple: true
-    - run: ls -R my-artifact
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: my-artifact
+          pattern: my-artifact-*
+          merge-multiple: true
+      - run: ls -R my-artifact
 ```
 
 This results in a directory like so:
@@ -206,12 +205,12 @@ It may be useful to download Artifacts from other workflow runs, or even other r
 
 ```yaml
 steps:
-- uses: actions/download-artifact@v4
-  with:
-    name: my-other-artifact
-    github-token: ${{ secrets.GH_PAT }} # token with actions:read permissions on target repo
-    repository: actions/toolkit
-    run-id: 1234
+  - uses: actions/download-artifact@v4
+    with:
+      name: my-other-artifact
+      github-token: ${{ secrets.GH_PAT }} # token with actions:read permissions on target repo
+      repository: actions/toolkit
+      run-id: 1234
 ```
 
 ## Limitations

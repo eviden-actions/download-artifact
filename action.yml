@@ -43,7 +43,6 @@ outputs:
     description: 'Path of artifact download'
     value: ${{ steps.download-artifact.outputs.download-path }}
 
-
 runs:
   using: 'composite'
   steps:
