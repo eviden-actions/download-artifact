@@ -3,14 +3,14 @@
 This downloads artifacts from your build
 This action is an extension of Github's [download-artifact](https://github.com/actions/download-artifact) action that `untar` the files after downloading.
 
-See also [upload-artifact](https://github.com/eviden-actions/upload-artifact).
+See also [upload-artifact](https://github.com/atos-actions/upload-artifact).
 
-[![Release](https://github.com/eviden-actions/download-artifact/actions/workflows/release.yml/badge.svg#main)](https://github.com/eviden-actions/download-artifact/actions/workflows/release.yml)
+[![Release](https://github.com/atos-actions/download-artifact/actions/workflows/release.yml/badge.svg#main)](https://github.com/atos-actions/download-artifact/actions/workflows/release.yml)
 
 ## v2 - What's new
 
 > [!IMPORTANT]
-> actions/download-artifact@v4+ is not currently supported on GHES yet. If you are on GHES, you must use [v1](https://github.com/eviden-actions/download-artifact/releases/tag/v1).
+> actions/download-artifact@v4+ is not currently supported on GHES yet. If you are on GHES, you must use [v1](https://github.com/atos-actions/download-artifact/releases/tag/v1).
 
 The release of actions/upload-artifact@4 and actions/download-artifact@v4 are major changes to the backend architecture of Artifacts. They have numerous performance and behavioral improvements.
 
