@@ -1,5 +1,5 @@
 {
-	"name": "@eviden-actions/download-artifact",
+	"name": "@atos-actions/download-artifact",
 	"description": "Download a build artifact that was previously uploaded as tar in the workflow by the upload-artifact action",
 	"keywords": [
 		"Actions",
@@ -10,9 +10,9 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/eviden-actions/download-artifact.git"
+		"url": "https://github.com/atos-actions/download-artifact.git"
 	},
-	"bugs": "https://github.com/eviden-actions/download-artifact/issues",
+	"bugs": "https://github.com/atos-actions/download-artifact/issues",
 	"license": "MIT",
 	"private": "true",
 	"version": "2.0.0",

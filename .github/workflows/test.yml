@@ -32,7 +32,7 @@ jobs:
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
 
       - name: '📤 Upload artifact'
-        uses: eviden-actions/upload-artifact@v2
+        uses: atos-actions/upload-artifact@v2
         with:
           name: 'test-artifact'
           path: |
