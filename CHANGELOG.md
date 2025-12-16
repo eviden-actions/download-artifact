@@ -1,3 +1,7 @@
+## <small>2.1.1 (2025-12-16)</small>
+
+* build(deps): bump actions/download-artifact from 6 to 7 (#242) ([3718f75](https://github.com/atos-actions/download-artifact/commit/3718f75)), closes [#242](https://github.com/atos-actions/download-artifact/issues/242)
+
 ## 2.1.0 (2025-12-16)
 
 * feat(deps): bump actions/download-artifact from 6 to 7 (#242) ([7dfc9c9](https://github.com/atos-actions/download-artifact/commit/7dfc9c9)), closes [#242](https://github.com/atos-actions/download-artifact/issues/242)
