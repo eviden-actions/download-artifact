@@ -1,3 +1,9 @@
+## 2.1.0 (2025-12-16)
+
+* feat(deps): bump actions/download-artifact from 6 to 7 (#242) ([7dfc9c9](https://github.com/atos-actions/download-artifact/commit/7dfc9c9)), closes [#242](https://github.com/atos-actions/download-artifact/issues/242)
+* chore: add patterns for actions-artifacts in dependabot.yml ([11a8849](https://github.com/atos-actions/download-artifact/commit/11a8849))
+* chore(deps): bump actions/download-artifact from 6 to 7 (#242) ([fe0485d](https://github.com/atos-actions/download-artifact/commit/fe0485d)), closes [#242](https://github.com/atos-actions/download-artifact/issues/242)
+
 ## <small>2.0.1 (2025-12-11)</small>
 
 * fix: rebrand from Eviden to Atos ([bc5e8b2](https://github.com/atos-actions/download-artifact/commit/bc5e8b2))
